@@ -1,16 +1,16 @@
-var data;
+var dados;
 
-function read_body(xhr){ 
+function corpo(xhr){ 
   if (!xhr.responseType || xhr.responseType === 'text'){ 
-      data = xhr.responseText; 
+      dados = xhr.responseText; 
      } else if (xhr.responseType === 'document'){ 
-       data = xhr.responseXML; 
+       dados = xhr.responseXML; 
      } else if (xhr.responseType === 'json'){ 
-       data = xhr.responseJSON; 
+       dados = xhr.responseJSON; 
      } else{ 
-       data = xhr.response; 
+       dados = xhr.response; 
      }
-      return data;
+      return dados;
 }
  
 var xhr = new XMLHttpRequest(); 
