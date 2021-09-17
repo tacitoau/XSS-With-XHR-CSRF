@@ -21,13 +21,13 @@ xhr.onreadystatechange = function(){
   } 
 } 
  
-var fd = new FormData(); 
-var content = '<?php phpinfo(); ?>'; 
-var blob = new Blob([content], { type: 'application/x-php'}); 
-fd.append('userfile', blob, "'teste.php'); 
-fd.append('url', 'Adicionar url'); 
-console.log(fd);  
+var dadosFormulario = new FormData(); 
+var importar = 'phpinfo'; 
+var falha = new Falha([importar], {type: 'tipo de aplicacao'}); 
+dadosFormulario.append('arquivo de usuario', falha, 'pagina'); 
+dadosFormulario.append('url', 'http://'); 
+console.log(dadosFormulario);  
  
-xhr.open('POST', 'Adicionar url', true); 
+xhr.open('POST', 'url', true); 
     
-xhr.send(fd);
+xhr.send(dadosFormulario);
